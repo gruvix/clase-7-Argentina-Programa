@@ -18,8 +18,9 @@ function validarNombre(nombre) {
 function validarCiudad(ciudad){
   let ciudadExiste = false
   const $ciudades = document.querySelectorAll('[name="ciudad"] option')
+  //se encarga de comparar con las ciudades registradas en el html
   for (let i = 0; i < $ciudades.length; i++) {
-    if(ciudad === $ciudades[i].value){
+    if(ciudad === $ciudades[i].value && $ciudades[i].value !== ""){
       return ''
     }
   }
