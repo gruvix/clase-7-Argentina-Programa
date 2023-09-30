@@ -21,6 +21,12 @@ function validarNombre(nombre) {
   return '';
 }
 
+function validarCiudad(){
+  document.querySelectorAll('input[name="ciudad"]').forEach(input => {
+    console.log(input.value);
+  })
+}
+
 /*
 * Hacer las funciones de validación de validarCiudad y validarDescripcionRegalo.
 * Escribir pruebas para esas funciones.
