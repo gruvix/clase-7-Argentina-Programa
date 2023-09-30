@@ -30,6 +30,9 @@ function validarDescripcionRegalo(descripcion){
   if (descripcion.length === 0) {
     return 'Este campo debe tener al menos 1 caracter';
   }
+  if(descripcion.length > 100){
+    return 'Este campo debe tener menos de 100 caracteres';
+  }
   return '';
 }
 

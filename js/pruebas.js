@@ -25,6 +25,10 @@ function probarValidarDescripcion(){
         validarDescripcionRegalo('') === 'Este campo debe tener al menos 1 caracter',
         'Validar nombre no validó que la descripción no sea vacío',
         );
+    console.assert(
+        validarDescripcionRegalo("asdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdada") === 'Este campo debe tener menos de 100 caracteres',
+        'validar nombre no validó que la descripción sea menor a 100 caracteres',
+    )
 }
     
 probarValidarNombre();
