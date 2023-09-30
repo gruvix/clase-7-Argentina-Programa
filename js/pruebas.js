@@ -19,6 +19,14 @@ function probarValidarCiudad() {
         'Validar nombre no validó que la ciudad no exista',
         );
     }
+
+function probarValidarDescripcion(){
+    console.assert(
+        validarDescripcion('') === 'Este campo debe tener al menos 1 caracter',
+        'Validar nombre no validó que la descripción no sea vacío',
+        );
+}
     
 probarValidarNombre();
 probarValidarCiudad();
+probarValidarDescripcion();

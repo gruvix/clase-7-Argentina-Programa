@@ -15,15 +15,22 @@ function validarNombre(nombre) {
   return '';
 }
 
-function validarCiudad(ciudadElegida){
+function validarCiudad(ciudad){
   let ciudadExiste = false
   const $ciudades = document.querySelectorAll('[name="ciudad"] option')
   for (let i = 0; i < $ciudades.length; i++) {
-    if(ciudadElegida === $ciudades[i].value){
+    if(ciudad === $ciudades[i].value){
       return ''
     }
   }
   return 'Esa ciudad no existe en la lista';
+}
+
+function validarDescripcionRegalo(descripcion){
+  if (descripcion.length === 0) {
+    return 'Este campo debe tener al menos 1 caracter';
+  }
+  return '';
 }
 
 /*
