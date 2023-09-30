@@ -5,12 +5,6 @@ const ciudad = $form.ciudad.value;
 const comportamiento = $form.comportamiento.value;
 const descripcion = $form["descripcion-regalo"].value;
 
-
-console.log(nombre);
-console.log(ciudad);
-console.log(comportamiento);
-console.log(descripcion);
-
 function validarNombre(nombre) {
   if (nombre.length === 0) {
     return 'Este campo debe tener al menos 1 caracter';
@@ -21,10 +15,15 @@ function validarNombre(nombre) {
   return '';
 }
 
-function validarCiudad(){
-  document.querySelectorAll('input[name="ciudad"]').forEach(input => {
-    console.log(input.value);
-  })
+function validarCiudad(ciudadElegida){
+  let ciudadExiste = false
+  const $ciudades = document.querySelectorAll('[name="ciudad"] option')
+  for (let i = 0; i < $ciudades.length; i++) {
+    if(ciudadElegida === $ciudades[i].value){
+      return ''
+    }
+  }
+  return 'Esa ciudad no existe en la lista';
 }
 
 /*

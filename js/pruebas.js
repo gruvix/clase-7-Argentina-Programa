@@ -12,4 +12,13 @@ function probarValidarNombre() {
   );
 }
 
+
+function probarValidarCiudad() {
+    console.assert(
+        validarCiudad("Chile") === 'Esa ciudad no existe en la lista',
+        'Validar nombre no validó que la ciudad no exista',
+        );
+    }
+    
 probarValidarNombre();
+probarValidarCiudad();
