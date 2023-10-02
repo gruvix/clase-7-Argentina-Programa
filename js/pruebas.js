@@ -38,15 +38,19 @@ function probarValidarCiudad() {
 function probarValidarDescripcion(){
     console.assert(
         validarDescripcionRegalo('una descripcion buena') === '',
-        'Validar nombre no validó una descripción válida',
+        'Validar descripcion no validó una descripción válida',
         );
     console.assert(
         validarDescripcionRegalo('') === 'Este campo debe tener al menos 1 caracter',
-        'Validar nombre no validó que la descripción no sea vacío',
+        'Validar descripcion no validó que la descripción no sea vacío',
         );
     console.assert(
         validarDescripcionRegalo("asdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdafasdada") === 'Este campo debe tener menos de 100 caracteres',
-        'validar nombre no validó que la descripción sea menor a 100 caracteres',
+        'validar descripcion no validó que la descripción sea menor a 100 caracteres',
+        );
+    console.assert(
+        validarDescripcionRegalo('²@!+-(){}[]"') === 'Este campo solo puede contener letras, numeros, puntos, comas y guiones',
+        'validar descripción no validó que la descripción solo contenga letras, números, punto, comas y guiones',
     )
 }
     
